@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="jquery.js"></script>
+        <script src="spamlib.js"></script>
+    </head>
+    <body>
+        <h1>demo without require</h1>
+        <ul id="modules">
+        </ul>
+        <script type="text/javascript">
+            (function () {
+                var $modules = $('#modules');
+
+                $modules.append(
+                    $('<li>' + Spam.name + ' - ' + Spam.version + '</li>')
+                );
+            }());
+        </script>
+    </body>
+</html>

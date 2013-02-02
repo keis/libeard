@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="require.js"></script>
+    </head>
+    <body>
+        <h1>demo page</h1>
+        <ul id="modules">
+        </ul>
+        <script type="text/javascript">
+            require(
+                ['jquery', 'spamlib', 'egglib'],
+                function ($, spam, egg) {
+                    var $modules = $('#modules');
+
+                    $modules.append(
+                        $('<li>' + spam.name + ' - ' + spam.version + '</li>')
+                    );
+                    $modules.append(
+                        $('<li>' + egg.name + ' - ' + egg.version + '</li>')
+                    );
+                }
+            );
+        </script>
+    </body>
+</html>
