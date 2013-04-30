@@ -1,8 +1,8 @@
-define([], function () {
+define(['underscore'], function (_) {
     var Spam = {
         name: 'spamlib',
         version: '1.0.0'
     };
-    root.Spam = Spam; // Export for non amd users
+    this.Spam = Spam; // Export for non amd users
     return Spam;
 });

@@ -7,6 +7,7 @@
         <h1>demo page</h1>
         <ul id="modules">
         </ul>
+        <script src="globals.pre.js"></script>
         <script type="text/javascript">
             require(
                 ['jquery', 'spamlib', 'egglib'],
@@ -19,6 +20,8 @@
                     $modules.append(
                         $('<li>' + egg.name + ' - ' + egg.version + '</li>')
                     );
+
+                    require(['globals.post']);
                 }
             );
         </script>

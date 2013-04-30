@@ -3,6 +3,7 @@
     <head>
         <script src="jquery.js"></script>
         <script src="spamlib.js"></script>
+        <script src="egglib.js"></script>
     </head>
     <body>
         <h1>demo without require</h1>
@@ -14,6 +15,10 @@
 
                 $modules.append(
                     $('<li>' + Spam.name + ' - ' + Spam.version + '</li>')
+                );
+
+                $modules.append(
+                    $('<li>' + Keis.Egg.name + ' - ' + Keis.Egg.version + '</li>')
                 );
             }());
         </script>

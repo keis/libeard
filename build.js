@@ -8,15 +8,16 @@ return {
     appdir: '.',
     baseUrl: 'src/vendor',
     dir: 'build',
-    optimize: 'none',
 
     wrap: {
         startFile: 'wrap/head.frag',
     },
 
     paths: {
+        'common': '../common',
         'spamlib': '../spamlib',
-        'egglib': '../egglib'
+        'egglib': '../egglib',
+        'sprlib': '../sprlib'
     },
 
     modules: [
@@ -29,6 +30,10 @@ return {
             name: 'egglib/main',
             include: 'almond',
             override: expose('egglib', 'egglib/main')
+        },
+        {
+            name: 'sprlib/main',
+            override: {wrap: {start: '', end: ''}}
         }
     ]
 };
