@@ -14,25 +14,22 @@ return {
     },
 
     paths: {
-        'common': '../common',
-        'spamlib': '../spamlib',
-        'egglib': '../egglib',
-        'sprlib': '../sprlib'
+        'keis': '../keis',
     },
 
     modules: [
         {
-            name: 'spamlib/main',
+            name: 'keis/spamlib/main',
             include: 'almond',
-            override: expose('spamlib', 'spamlib/main')
+            override: expose('spamlib', 'keis/spamlib/main')
         },
         {
-            name: 'egglib/main',
+            name: 'keis/egglib/main',
             include: 'almond',
-            override: expose('egglib', 'egglib/main')
+            override: expose('egglib', 'keis/egglib/main')
         },
         {
-            name: 'sprlib/main',
+            name: 'keis/sprlib/main',
             override: {wrap: {start: '', end: ''}}
         }
     ]

@@ -1,4 +1,4 @@
-define(['common/keis'], function (keis) {
+define(['keis/namespace'], function (keis) {
     return keis.namespace('Egg', {
         name: 'egglib'
     });

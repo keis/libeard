@@ -1,4 +1,4 @@
-TARGETS=build/spamlib/main.js build/egglib/main.js build/jquery.js
+TARGETS=build/keis/spamlib/main.js build/keis/egglib/main.js build/jquery.js
 RJSFLAGS=optimize=uglify
 
 all: ${TARGETS}
