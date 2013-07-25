@@ -12,7 +12,7 @@ build.deps: build/build.txt
 -include build.deps
 
 # Test directory setup
-TEST=test/spamlib.js test/egglib.js test/jquery.js test/require.js
+TEST=test/keis/spamlib.js test/keis/egglib.js test/jquery.js test/require.js
 
 test: ${TEST}
 
@@ -20,6 +20,7 @@ test/jquery.js test/require.js: build/jquery.js build/require.js
 	cp $^ test
 
 test/%.js: build/%/main.js
+	mkdir -p `dirname $@`
 	cp $^ $@
 
 # Misc
